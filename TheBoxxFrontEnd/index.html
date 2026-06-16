@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheBoxxPopshop | Delicious Eats & Retail Popcorn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Floating Theme Switch Toggle Switcher -->
+    <div class="theme-switch-wrapper">
+        <button id="themeToggleBtn" class="theme-toggle-button" title="Switch Theme Mode">
+            <i class="fas fa-sun"></i> <span class="toggle-text">Light Mode</span>
+        </button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-branding">
+            <img src="/img/logo png.png" alt="Logo" class="nav-logo-img">
+            <div class="logo">TheBoxx<span>Popshop</span></div>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#special-popcorn">B2B Popcorn</a></li>
+            <li><a href="#cart-section">Your Order (<span id="cart-count">0</span>)</a></li>
+            <li><a href="#feedback">Reviews</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+<section id="home" class="hero-slider">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1400&auto=format&fit=crop');">
+            <div class="slide-content">
+                <span class="hero-tag">Sizzling & Fresh</span>
+                <h1>TheBoXXGourmet Grill</h1>
+                <p>Premium flame-grilled chicken, golden chips, and customized shawarma tiers prepped on demand.</p>
+                <a href="#menu" class="btn">Explore Menu</a>
+            </div>
+        </div>
+        
+        <!-- <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1644781491741-2b0e6760df76?q=80&w=1400&auto=format&fit=crop');">
+            <div class="slide-content luxury-card-style">
+                <div class="shawarma-visual-wrapper">
+                    <div class="shawarma-embedded-img">
+                        <img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?q=80&w=600&auto=format&fit=crop" alt="Gourmet Loaded Shawarma Tiers">
+                    </div>
+                    <div class="shawarma-embedded-text">
+                        <span class="hero-tag tag-alt">Customer Favorite 🔥</span>
+                        <h2 class="glow-text">Gourmet Shawarma Tiers</h2>
+                        <p class="sub-headline">From Double Beef to No-Sausage options, customized to your perfect spice level.</p>
+                        <div class="mini-features">
+                            <span><i class="fas fa-check-circle"></i> Extra Creamy</span>
+                            <span><i class="fas fa-fire"></i> Selectable Spice</span>
+                        </div>
+                        <a href="#menu" class="btn btn-showcase">Build Your Wrap Basket</a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1612927601601-6638404737ce?q=80&w=1400&auto=format&fit=crop');">
+            <div class="slide-content">
+                <h1>Loaded Noodles & Eggs</h1>
+                <p>Quick, fiery stir-fried instant noodles prepped just the way you like it.</p>
+                <a href="#menu" class="btn">View Sides</a>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1505686994434-e3cc5abf1330?q=80&w=1400&auto=format&fit=crop');">
+            <div class="slide-content">
+                <span class="hero-tag">Crunchy & Sweet</span>
+                <h1>Gourmet Retail Popcorn</h1>
+                <p>Industrial-grade sealed packaging built perfectly for retail distribution and ultimate movie snacking formats.</p>
+                <a href="#special-popcorn" class="btn">B2B Bulk Portal</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Menu Section -->
+    <section id="menu" class="container">
+        <h2 class="section-title">Our Menu</h2>
+        <p style="text-align: center; margin-top: -30px; margin-bottom: 40px;" class="menu-sub">Click any item below to add it to your order basket and select your custom parameters.</p>
+        
+        <div class="grid">
+            <!-- Shawarma Tiers -->
+            <div class="card product-card" data-name="Double Shawarma" data-price="4000" data-is-shawarma="true">
+                <div class="card-badge">Top Seller</div>
+                <h3>Double Shawarma</h3>
+                <p class="price">₦4,000</p>
+                <p>Packed with extra double protein and lush cream.</p>
+                <button class="btn add-to-cart-btn"><i class="fas fa-plus"></i> Add to Basket</button>
+            </div>
+
+            <div class="card product-card" data-name="Single Shawarma" data-price="3500" data-is-shawarma="true">
+                <h3>Single Shawarma</h3>
+                <p class="price">₦3,500</p>
+                <p>Classic single meat layer wrapped beautifully.</p>
+                <button class="btn add-to-cart-btn"><i class="fas fa-plus"></i> Add to Basket</button>
+            </div>
+
+            <div class="card product-card" data-name="No Sausage Shawarma" data-price="3000" data-is-shawarma="true">
+                <h3>No Sausage Shawarma</h3>
+                <p class="price">₦3,000</p>
+                <p>All meat, clean cuts, zero sausage filling.</p>
+                <button class="btn add-to-cart-btn"><i class="fas fa-plus"></i> Add to Basket</button>
+            </div>
+
+            <!-- Chicken, Turkey, Hotdog -->
+            <div class="card product-card" data-name="Chicken & Chips (Regular)" data-price="5000">
+                <h3>Chicken & Chips (Reg)</h3>
+                <p class="price">₦5,000</p>
+                <p>Golden seasoned chips with a tender chicken leg.</p>
+                <button class="btn add-to-cart-btn"><i class="fas fa-plus"></i> Add to Basket</button>
+            </div>
+
+            <div class="card product-card" data-name="Chicken & Chips (Jumbo)" data-price="6000">
+                <h3>Chicken & Chips (Jumbo)</h3>
+                <p class="price">₦6,000</p>
+                <p>Max sizing fries alongside a premium deep-fried giant chicken option.</p>
+                <button class="btn add-to-cart-btn"><i class="fas fa-plus"></i> Add to Basket</button>
+            </div>
+
+            <div class="card product-card" data-name="Turkey & Chips" data-price="3500">
+                <h3>Turkey & Chips</h3>
+                <p class="price">₦3,500</p>
+                <p>Richly spiced grilled turkey cuts served with standard crispy chips.</p>
+                <button class="btn add-to-cart-btn"><i class="fas fa-plus"></i> Add to Basket</button>
+            </div>
+
+            <div class="card product-card" data-name="Premium Hotdog" data-price="3000">
+                <h3>Premium Grilled Hotdog</h3>
+                <p class="price">₦3,000</p>
+                <p>Toasted bun with premium frankfurter sausage, sauces, and relish.</p>
+                <button class="btn add-to-cart-btn"><i class="fas fa-plus"></i> Add to Basket</button>
+            </div>
+
+            <!-- Noodles & Eggs -->
+            <div class="card product-card" data-name="Indomie Noodles" data-price="1000">
+                <h3>Stir-fry Indomie Noodles</h3>
+                <p class="price">₦1,000</p>
+                <p>Quick fiery tossed instant noodles with native spices.</p>
+                <button class="btn add-to-cart-btn"><i class="fas fa-plus"></i> Add to Basket</button>
+            </div>
+
+            <div class="card product-card" data-name="Side Egg" data-price="500">
+                <h3>Extra Egg</h3>
+                <p class="price">₦500</p>
+                <p>Fried or boiled companion to round up your noodles perfectly.</p>
+                <button class="btn add-to-cart-btn"><i class="fas fa-plus"></i> Add to Basket</button>
+            </div>
+
+            <!-- Popcorn Retail Option -->
+            <div class="card product-card" data-name="Classic Sweet Popcorn" data-price="1000">
+                <h3>Classic Sweet Popcorn</h3>
+                <p class="price">₦1,000</p>
+                <p>Fluffy sweet movie-style standard pack popcorn.</p>
+                <button class="btn add-to-cart-btn"><i class="fas fa-plus"></i> Add to Basket</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Checkout Basket & Logistics Page -->
+    <section id="cart-section" class="container dark-section">
+        <h2 class="section-title text-white">Your Order Checkout Details</h2>
+        
+        <div class="checkout-wrapper">
+            <!-- Basket summary list -->
+            <div class="order-summary-box">
+                <h3>Items Added</h3>
+                <ul id="cart-items-list" class="empty-list-notice">
+                    <p>Your basket is currently empty. Pick meals from the menu above to build your order list.</p>
+                </ul>
+                
+                <!-- Breakdown Fields -->
+                <div class="breakdown-row">Subtotal: <span id="cart-subtotal-price">₦0</span></div>
+                <div class="breakdown-row">Delivery/Logistics: <span id="cart-delivery-price">₦0</span></div>
+                <div class="total-display">
+                    Total Amount Due: <span id="cart-total-price">₦0</span>
+                </div>
+
+                <!-- Payment Details Box -->
+                <div class="payment-info-box">
+                    <h4><i class="fas fa-university"></i> Bank Transfer Instructions</h4>
+                    <p>Kindly pay your calculated total amount to the corporate merchant account details listed below:</p>
+                    <p class="bank-details">
+                        <strong>Bank:</strong> MONIEPOINT <br>
+                        <strong>Account Number:</strong> 5654296431 <br>
+                        <strong>Account Name:</strong> The BoXX Cinemas International
+                    </p>
+                    <p class="alert-note">⚠️ Note: Completing order dispatches notification straight to our Email and WhatsApp channels.</p>
+                </div>
+            </div>
+
+            <!-- Fulfillment Information Form -->
+            <div class="delivery-form-box">
+                <h3>Fulfillment & Logistics Details</h3>
+                <form id="deliveryForm" action="https://formspree.io/f/maqzkdql" method="POST">
+                    
+                    <input type="hidden" name="_subject" value="New Food Order Confirmation - TheBoxxPoshop">
+                    <input type="hidden" id="hiddenOrderDetails" name="Ordered_Items_List" required>
+                    <input type="hidden" id="hiddenTotalField" name="Total_Price_Paid" required>
+
+                    <div class="form-group">
+                        <label>Recipient Full Name</label>
+                        <input type="text" id="custName" name="Customer_Name" placeholder="E.g. John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Active Contact Phone Number</label>
+                        <input type="tel" id="custPhone" name="Customer_Phone" placeholder="E.g. 08012345678" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Fulfillment Preference</label>
+                        <select id="deliveryZone" name="Fulfillment_Method" required>
+                            <option value="pickup" selected>🏪 Walk-In Store Pickup (Free - ₦0)</option>
+                            <option value="estate">🛵 Delivery: Within the Estate (₦500)</option>
+                            <option value="other">🚚 Delivery: Other Location (Fee will be communicated)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label id="addressLabel">Physical Delivery Address (Not Required)</label>
+                        <textarea id="deliveryAddressField" name="Delivery_Address" rows="3" placeholder="You have selected Walk-In Store Pickup. No delivery address is required."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Payment Reference / Remarks</label>
+                        <input type="text" id="custRemarks" name="Payment_Reference_Notes" placeholder="E.g. Paid via Moniepoint App" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-block" id="submitOrderBtn" disabled>Complete Order & Send to Kitchen</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dedicated Retail B2B Page: Special Popcorn Section -->
+    <section id="special-popcorn" class="special-section">
+        <div class="container unique-page-layout">
+            <div class="special-text">
+                <span class="tag">Supermarket & Wholesaler Distribution Portal</span>
+                <h2>TheBoxxPopsshop Special Popcorn</h2>
+                <p>We mass-manufacture high-grade, beautifully sealed retail packages curated explicitly for supermarket distribution chains, local grocery outlets, and private labels. Made with premium seed kernels for long shelf stability without losing crisp profile crunch.</p>
+                
+                <ul class="benefits-list">
+                    <li><i class="fas fa-barcode"></i> Full barcoding layouts ready for point of sale systems</li>
+                    <li><i class="fas fa-shield-alt"></i> Clean industrial grade sealing giving exceptional long shelf lives</li>
+                    <li><i class="fas fa-hand-holding-usd"></i> Generous bulk pricing matrices optimized for high profit retail margin reselling</li>
+                </ul>
+                <a href="#retailer-form-anchor" class="btn btn-alt">Fill Retail Application Form</a>
+            </div>
+            <div class="special-image">
+                <img src="https://images.unsplash.com/photo-1578849278619-e73505e9610f?q=80&w=600&auto=format&fit=crop" alt="TheBoxxPopsshop Premium Sealed Supermarket Distribution Ready Packaging">
+            </div>
+        </div>
+    </section>
+
+    <!-- Supermarket Retailer Onboarding Application Form -->
+    <section id="retailer-form-anchor" class="container">
+        <div class="form-wrapper retailer-form-box-style">
+            <h3 style="font-size:1.8rem; margin-bottom:10px; text-align:center;"><i class="fas fa-store"></i> Supermarket Bulk Order Registration</h3>
+            <p style="text-align:center; margin-bottom:30px;" class="form-subtext">Are you a supermarket manager or store procurement officer? Input your custom package target requirements below to dispatch rates.</p>
+            
+            <form id="retailerForm" action="https://formspree.io/f/maqzkdql" method="POST">
+                <input type="hidden" name="_subject" value="New Supermarket Bulk Retail Application Request">
+                
+                <div class="form-group">
+                    <label>Registered Supermarket / Business Name</label>
+                    <input type="text" id="retBizName" name="Supermarket_Business_Name" placeholder="E.g. Shoprite, Hubmart" required>
+                </div>
+                <div class="form-group">
+                    <label>Contact Person / Procurement Officer Name</label>
+                    <input type="text" id="retOfficer" name="Procurement_Officer_Name" placeholder="Your Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Official Email Address</label>
+                    <input type="email" id="retEmail" name="Business_Email" placeholder="purchasing@company.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Mobile Line for Logistics Coordinators</label>
+                    <input type="tel" id="retPhone" name="Business_Phone" placeholder="Active phone number" required>
+                </div>
+                <div class="form-group">
+                    <label>Supermarket Storefront Operational Address</label>
+                    <textarea id="retAddress" name="Store_Address" rows="3" placeholder="Full storefront address locations..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Desired Initial Target Wholesale Volumes (In Cartons)</label>
+                    <input type="number" id="retVolume" name="Expected_Monthly_Volume" min="1" placeholder="Type exact amount of custom packs/cartons needed..." required>
+                </div>
+                <button type="submit" class="btn btn-block">Submit Application For Bulk Rates</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback" class="container light-bg-reviews">
+        <h2 class="section-title">What Our Foodies Say</h2>
+        <div class="feedback-container" id="feedbackContainer">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"The Double Shawarma at ₦4,000 is stacked massively! Choosing 'Spicy' on checkout gave it an awesome kick."</p>
+                <h4>- Tunde A.</h4>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"We retail TheBoxxPopsshop boxes at our grocery outlet branches. Long shelf stability, clean barcodes, and high crisp retention!"</p>
+                <h4>- Hub Distribution Supermarket</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 TheBoxxPoshop. All Rights Reserved. Operations powered by The BoXX Cinemas International.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
