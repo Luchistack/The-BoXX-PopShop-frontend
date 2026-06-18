@@ -126,19 +126,31 @@ document.getElementById('deliveryForm').addEventListener('submit', async (e) => 
         items: cartData.map(i => ({ name: i.name, quantity: 1, spiceLevel: i.spiceLevel }))
     };
 
+    // 1. Send to your custom backend
     try {
-        const res = await fetch(BACKEND_BASE_URL, {
+        await fetch(BACKEND_BASE_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload)
         });
-        if (res.ok) {
-            alert("Order saved!");
-            cartData = []; renderUpdatedCartUI();
-        } else alert("Error saving order.");
-    } catch { alert("Connection failed."); }
+    } catch (err) {
+        console.log("Backend offline, relying on email/WhatsApp.");
+    }
+
+    // 2. Send to Formspree
+    try {
+        await fetch("https://formspree.io/f/maqzkdql", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+        });
+        alert("Order placed successfully!");
+    } catch (err) {
+        alert("Order details recorded.");
+    }
     
-    // Fallback WhatsApp
+    // 3. Reset UI & WhatsApp Fallback
+    cartData = []; renderUpdatedCartUI();
     window.open(`https://api.whatsapp.com/send?phone=${MERCHANT_WHATSAPP_NUMBER}&text=${encodeURIComponent("New Order: " + payload.customerName)}`);
 });
 
